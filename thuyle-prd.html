@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  Thuy Embedded StgSmashfly
+  
+  <div style="min-width: 400px; min-height: 300px;padding: 0px" id="my-chat-widget"></div>
+<script type='text/javascript'>
+    var oliviaChatData = oliviaChatData || [];
+    var oliviaChatBaseUrl =  'https://stg.smashfly.ai';
+    oliviaChatData.push(['setKey', 'qyrtlqywysyvzhwinwtd']);
+    oliviaChatData.push(['setParent', 'my-chat-widget']);
+    oliviaChatData.push(['start']);
+    (function() {
+        var apply = document.createElement('script');
+        apply.type = 'text/javascript';
+        apply.async = true;
+        apply.src = 'https://d3a47ovvjqepkh.cloudfront.net/static/site/js/widget-client.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(apply, s);
+    })();
+</script>
+</body>
+</html> 
