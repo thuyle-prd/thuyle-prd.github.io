@@ -1,45 +1,229 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-​
-    <title>Thuy Embedded StgSmashfly</title>
-    <meta name="description" content="The HTML5 Herald" />
-    <meta name="author" content="Thuy Le" />
+    <head>
+      <meta charset="utf-8" />
+      <title>Test Widget & Embedded</title>
+      <meta name="description" content="The HTML5 Herald" />
+      <meta name="author" content="Nga Thai" />
+      <style type="text/css">
+      .row{
+        display: grid;
+        grid-template-columns: auto auto;
+        /*padding-left: 80px;*/
+        /*margin-left: 20px;*/
+      }
+
+      img{
+        padding-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+      }
+
+      h1{
+        margin-top: 20px;
+      }
+
+
+      h1, h2{
+        font-family: "Lucida Console", monospace;
+        text-align: center;
+        color: #25c9d0;
+        font-weight: 600;
+      }
+
+      table{
+        border-collapse: collapse;
+        width: 650px;
+        font-family: "Lucida Console", monospace;
+      }
+
+      td{
+        padding-left: 10px;
+      }
+
+      tr{
+        height: 40px;
+      }
+
+.logo {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #25c9d0;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 650px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #8CFFFF;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  /*padding: 0 18px;*/
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+      
+    </style>
   </head>
-​
   <body>
-    <h1>Environment: Smashfly STG</h1>
-​
-    <table>
-      <tr>
-        <td>Company:</td>
-        <td>ParadoxVN - Thuy Le: Company</td>
-      </tr>
-      <tr>
-        <td>Embedded name:</td>
-        <td>Thuy Embedded</td>
-     </tr>
-    </table>
-​
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-​
-    <div style="width: 400px; height: 500px" id="my-chat-widget"></div>
-​
-    <script type="text/javascript">
-      var _apply = _apply || [];
-    var _applybase =  'https://stg.smashfly.ai';
-    _apply.push(['setKey', 'qprgbehvwhwyurzmjfxv']);
-    _apply.push(['setParent', 'my-chat-widget']);
-    _apply.push(['start']);
-    (function() {
-        var apply = document.createElement('script');
-        apply.type = 'text/javascript';
-        apply.async = true;
-        apply.src = 'https://d25zu39ynyitwy.cloudfront.net/static/site/js/widget-client.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(apply, s);
-    })();
-    </script>
-    
+
+    <div class="logo">
+      <div class="column"></div>
+      <div class="column"><img src="https://d25zu39ynyitwy.cloudfront.net/static/site/img/logo-paradox-olivia.png"></div>
+      <div class="column"></div>
+    </div>
+
+    <h1>TEST WIDGET AND EMBEDDED</h1>
+
+    <div id="content">
+    <div class="row">
+      <div class="column">
+        <h2>WIDGET</h2>
+
+        <button class="collapsible">STG</button>
+        <div class="content">
+          <table class="tftable" border="1">
+          <tr><td>Nga: Nestlé (UAT)</td><td><a href="/nga_widget_stg_nestle.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Nga: Experience ON</td><td><a href="/nga_widget_stg_experience_on.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Thanh : Thanh Company</td><td><a href="/thanh_widget_stg.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Thanh : Thanh Company (new OliviaData)</td><td><a href="/thanh_widget_stg_new_code.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Thuy Le: Thuy Company</td><td><a href="/thuy_le_widget_stg.html" target="_blank">LINK</a></td></tr>
+          </table>
+        </div>
+
+        
+        <button class="collapsible">TEST</button>
+        <div class="content">
+        <table class="tftable" border="1">
+          <tr><td>Nga Company - Jobs</td><td><a href="/nga_widget_test_ngajob.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Stephen's Staging Co (Unilever)</td><td><a href="/thuy_le_widget_test.html" target="_blank">LINK</a></td></tr>
+          <tr><td>ParadoxVN - Thuy Le: Thuy Company</td><td><a href="/thuy_le_widget_test2.html" target="_blank">LINK</a></td></tr>
+          <tr><td>ParadoxVN - Thanh : Thanh TEST</td><td><a href="/thanh_widget_test.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Nga Applicant Flow</td><td><a href="/nga_widget_test_ngaaf.html" target="_blank">LINK</a></td></tr>
+        </table>
+        </div>
+
+        <button class="collapsible">Lowe's STG</button>
+        <div class="content">
+        <table class="tftable" border="1">
+          <tr><td>Nga -Ha: Applicant Flow</td><td><a href="/nga_widget_lowesstg.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Thanh : Thanh Company</td><td><a href="/thanh_widget_lowesstg.html" target="_blank">LINK</a></td></tr>
+        </table>
+        </div>
+
+        <button class="collapsible">DEV</button>
+        <div class="content">
+        <table class="tftable" border="1">
+          <tr><td>ParadoxVN: Thuy Company</td><td><a href="/thuy_le_widget_dev.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Nga Company</td><td><a href="/nga_widget_dev.html" target="_blank">LINK</a></td></tr>
+          <tr><td>ParadoxVN - Thanh : CMS</td><td><a href="/thanh_widget_dev.html" target="_blank">LINK</a></td></tr>
+        </table>
+        </div>
+
+        <button class="collapsible">McHire STG</button>
+        <div class="content">
+        <table class="tftable" border="1">
+          <tr><td>Nga Company</td><td><a href="/nga_widget_mcstg.html" target="_blank">LINK</a></td></tr>
+        </table>
+        </div>
+
+        <button class="collapsible">Smashfly STG</button>
+        <div class="content">
+        <table class="tftable" border="1">
+          <tr><td>Nga Company</td><td><a href="/nga_widget_stgsmashfly.html" target="_blank">LINK</a></td></tr>
+        </table>
+        </div>
+
+        <button class="collapsible">Olivia PROD</button>
+        <div class="content">
+        <table class="tftable" border="1">
+          <tr><td>Nga: Hire ON</td><td><a href="/nga_widget_prod_hire_on.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Nga: Experience ON</td><td><a href="/nga_widget_prod_experience.html" target="_blank">LINK</a></td></tr>
+        </table>
+        </div>
+
+
+      </div>
+
+  <div class="column">
+        <h2>EMBEDDED</h2>
+
+        <button class="collapsible">STG</button>
+        <div class="content">
+        <table class="tftable" border="1">
+          <tr><td>Nga: Nestlé (UAT)</td><td><a href="/nga_embedded_stg_nestle.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Nga: Experience ON</td><td><a href="/nga_embedded_stg_experience.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Paradox VN - Hanh: Conversation2</td><td><a href="/hanhtran_embedded_stg.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Thanh : Thanh Company</td><td><a href="/thanh_embedded_stg.html" target="_blank">LINK</a></td></tr>
+        </table>
+        </div>
+
+        <button class="collapsible">TEST</button>
+        <div class="content">
+        <table class="tftable" border="1">
+          <tr><td>Nga Company - Jobs</td><td><a href="/nga_embedded_test_ngajob.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Nga Applicant Flow</td><td><a href="/nga_embedded_test_ngaaf.html" target="_blank">LINK</a></td></tr>
+        </table>
+        </div>
+
+        <button class="collapsible">Olivia PROD</button>
+        <div class="content">
+        <table class="tftable" border="1">
+          <tr><td>Nga: Hire ON</td><td><a href="/nga_embedded_prod_hire_on.html" target="_blank">LINK</a></td></tr>
+          <tr><td>Nga: Experience ON</td><td><a href="/nga_embedded_prod_experience.html" target="_blank">LINK</a></td></tr>
+        </table>
+        </div>
+
+    </div>
+    </div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+
+
   </body>
-</html>
+  </html>
