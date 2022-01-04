@@ -1,25 +1,26 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-​
-    <title>Thuy Le Widget STG McHire </title>
+
+    <title>Thuy Widget STG McHire</title>
     <meta name="description" content="The HTML5 Herald" />
     <meta name="author" content="Thuy Le" />
   </head>
-​
+
   <body>
     <h1>Environment: McHire STG</h1>
-​
+
     <table>
       <tr>
         <td>Language:</td>
         <td>
           <select id="language" onchange="changeLanguage()">
-            <option value="en">English (en)</option>
-            <option value="en-US">English (en-US)</option>
+            <option value="en">English</option>
             <option value="ar">Arabic</option>
-            <option value="he">Hebrew (he)</option>
+            <option value="he">Hebrew</option>
+            <option value="ja">Japanese</option>
+            <option value="es">Spanish</option>
+            <option value="vi">Vietnamese</option>
           </select>
         </td>
       </tr>
@@ -29,9 +30,11 @@
       </tr>
       <tr>
         <td>Widget name:</td>
-        <td>Thuy Le Widget</td>
+        <td>Thuy Widget</td>
       </tr>
     </table>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
     <script>
       function loadLanguage() {
@@ -49,13 +52,11 @@
         location.reload();
       }
     </script>
-​
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-​
+
     <script type="text/javascript">
       var _apply = _apply || [];
-      var _applybase = 'https://stg.mchire.ai';
-      _apply.push(['setKey', 'ftcsnuwxwaaotrxacuet']);
+      var _applybase =  'https://stg.mchire.com';
+    _apply.push(['setKey', 'ftcsnuwxwaaotrxacuet']);
       _apply.push(['start']);
       (function () {
         var apply = document.createElement('script');
@@ -65,7 +66,7 @@
           'https://d25zu39ynyitwy.cloudfront.net/static/site/js/widget-client.js';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(apply, s);
-      })();
+      })(); 
     </script>
   </body>
 </html>
