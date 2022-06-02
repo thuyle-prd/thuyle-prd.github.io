@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Thuy Embedded FEDEX</title>
+    <meta name="description" content="The HTML5 Herald" />
+    <meta name="author" content="Thuy Le" />
+  </head>
+
+  <body>E
+    <h1>Environment:FEDEX STG</h1>
+
+    <table>
+      <tr>
+      <tr>
+        <td>Company:</td>
+        <td>ParadoxVN - Nga: Fedex</td>
+      </tr>
+      <tr>
+        <td>Embedded name:</td>
+        <td>Thuy Embedded </td>
+      </tr>
+    </table> 
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+<div style="width: 400px; height: 500px" id="my-chat-widget"></div>
+<script type='text/javascript'>
+    var oliviaChatData = oliviaChatData || [];
+    var oliviaChatBaseUrl =  'https://fedexstg.paradox.ai';
+    oliviaChatData.push(['setKey', 'xdyupknwharnrbofnzva']);
+    oliviaChatData.push(['setParent', 'my-chat-widget']);
+    oliviaChatData.push(['start']);
+    (function() {
+        var apply = document.createElement('script');
+        apply.type = 'text/javascript';
+        apply.async = true;
+        apply.src = 'https://d2xra9v1z0mbwm.cloudfront.net/static/site/js/widget-client.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(apply, s);
+    })();
+</script>
+       
+  </body>
+</html>
